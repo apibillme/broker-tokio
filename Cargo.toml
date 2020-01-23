@@ -1,14 +1,6 @@
 [package]
 name = "broker-tokio"
-# When releasing to crates.io:
-# - Remove path dependencies
-# - Update html_root_url.
-# - Update doc url
-#   - Cargo.toml
-#   - README.md
-# - Update CHANGELOG.md.
-# - Create "v0.2.x" git tag.
-version = "0.2.11"
+version = "0.2.12"
 edition = "2018"
 authors = ["Tokio Contributors <team@tokio.rs>"]
 license = "MIT"

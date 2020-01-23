@@ -354,6 +354,11 @@ where
     }
 }
 
+impl<T, S> Copy for Rx<T, S>
+where
+    S: Semaphore,
+{ }
+
 // ===== impl Chan =====
 
 impl<T, S> Chan<T, S>
