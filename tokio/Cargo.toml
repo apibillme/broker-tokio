@@ -1,5 +1,5 @@
 [package]
-name = "tokio"
+name = "broker-tokio"
 # When releasing to crates.io:
 # - Remove path dependencies
 # - Update html_root_url.
@@ -16,10 +16,7 @@ readme = "README.md"
 documentation = "https://docs.rs/tokio/0.2.10/tokio/"
 repository = "https://github.com/tokio-rs/tokio"
 homepage = "https://tokio.rs"
-description = """
-An event-driven, non-blocking I/O platform for writing asynchronous I/O
-backed applications.
-"""
+description = "tokio for broker"
 categories = ["asynchronous", "network-programming"]
 keywords = ["io", "async", "non-blocking", "futures"]
 

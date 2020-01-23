@@ -343,6 +343,17 @@ where
     }
 }
 
+impl<T, S> Clone for Rx<T, S>
+where
+    S: Semaphore,
+{
+    fn clone(&self) -> Rx<T, S> {
+        Rx {
+            inner: self.inner.clone()
+        }
+    }
+}
+
 // ===== impl Chan =====
 
 impl<T, S> Chan<T, S>
