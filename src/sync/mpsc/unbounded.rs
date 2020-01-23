@@ -46,6 +46,14 @@ impl<T> fmt::Debug for UnboundedReceiver<T> {
     }
 }
 
+impl<T> Clone for UnboundedReceiver<T> {
+    fn clone(&self) -> Self {
+        UnboundedReceiver {
+            chan: self.chan.clone(),
+        }
+    }
+}
+
 /// Create an unbounded mpsc channel for communicating between asynchronous
 /// tasks.
 ///

@@ -44,6 +44,14 @@ impl<T> fmt::Debug for Receiver<T> {
     }
 }
 
+impl<T> Clone for Receiver<T> {
+    fn clone(&self) -> Self {
+        Receiver {
+            chan: self.chan.clone(),
+        }
+    }
+}
+
 /// Create a bounded mpsc channel for communicating between asynchronous tasks,
 /// returning the sender/receiver halves.
 ///
