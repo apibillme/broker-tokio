@@ -357,7 +357,13 @@ where
 impl<T, S> Copy for Rx<T, S>
 where
     S: Semaphore,
-{ }
+{ 
+    fn copy(&self) -> Rx<T, S> {
+        Rx {
+            inner: self.inner.clone()
+        }
+    }   
+}
 
 // ===== impl Chan =====
 
